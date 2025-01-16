@@ -3,10 +3,10 @@
 @admin
 
 # For admin only
-/TODO @admin
-/output.tf @admin
+@admin /TODO
+@admin /output.tf
 
 # For DevOps team
-/azure-pipelines.yaml @DevOps
-/main.tf @DevOps
-/variables.tf @DevOps
+@DevOps /azure-pipelines.yaml
+@DevOps /main.tf
+@DevOps /variables.tf
