@@ -7,5 +7,5 @@
 
 # For DevOps team
 /azure/Azure-pipeline.yaml @DevOps-team-example/DevOps
-/files/** @DevOps-team-example/DevOps
+/files/** @DevOps-team-example/DevOps 
 
