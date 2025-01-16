@@ -1,5 +1,5 @@
 # Default owner
-@admin
+@DevOps-team-example/admin
 
 # For admin only
 /yaml/** @DevOps-team-example/admin
