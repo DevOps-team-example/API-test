@@ -3,7 +3,7 @@
 
 # For admin only
 /yaml/** @DevOps-team-example/admin
-/scripts/** @DevOps-team-example/admin
+/scripts/CODEOWNERS @DevOps-team-example/admin
 
 # For DevOps team
 /azure/Azure-pipeline.yaml @DevOps-team-example/devops
