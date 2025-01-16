@@ -3,7 +3,7 @@
 @admin
 
 # For admin only
-/TODO/ @admin
+/TODO @admin
 /output.tf @admin
 
 # For DevOps team
