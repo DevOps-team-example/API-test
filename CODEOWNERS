@@ -1,11 +1,12 @@
 
+# Default owner
 @admin
 
-# For Developers
+# For admin only
 /TODO/ @admin
-/output/ @admin
+/output.tf @admin
 
-# For devops, infra, or admin
-/azure-pipelines/ @DevOps 
-/main.tf/ @DevOps 
-/variables.tf/ @DevOps
+# For DevOps team
+/azure-pipelines.yaml @DevOps
+/main.tf @DevOps
+/variables.tf @DevOps
