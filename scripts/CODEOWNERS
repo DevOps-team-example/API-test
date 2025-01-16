@@ -2,10 +2,10 @@
 @admin
 
 # For admin only
-/yaml/** @DevOps-team-example/admin
-/scripts/** @DevOps-team-example/admin
+/yaml/** @DevOps-team-example/Teams/admin
+/scripts/** @DevOps-team-example/Teams/admin
 
 # For DevOps team
-/azure/Azure-pipeline.yaml @DevOps-team-example/DevOps
-/files/** @DevOps-team-example/DevOps 
+/azure/Azure-pipeline.yaml @DevOps-team-example/Teams/DevOps
+/files/** @DevOps-team-example/Teams/DevOps
 
