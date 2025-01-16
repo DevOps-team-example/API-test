@@ -1,0 +1,11 @@
+# Default owner
+@admin
+
+# For admin only
+/yaml/** @admin
+/scripts/** @admin
+
+# For DevOps team
+/azure/** @DevOps
+/files/** @DevOps
+
