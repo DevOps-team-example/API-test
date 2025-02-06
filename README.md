@@ -12,10 +12,20 @@ AGL Enterprise Integration Platform API Management API Definition and Assets
 | Azure Pipeline | -                                       | The build agent should run on a Linux operating system with PowerShell Core capability. |
 
 ## Pipelines
+APIOps has two main pipelines: **Extractor** (build) and **Publisher** (deploy).
 
-APIOps has two major pipelines, the **extractor** (build) and the **publisher** (deploy) pipeline.
+| **Pipeline**   | **Description**                                          | **Pipeline Structure** | **Configuration File** |
+|---------------|--------------------------------------------------|----------------------|----------------------|
+| **Extractor**  | Generates APIOps artifacts from an APIM instance for CI/CD updates. | Located in `API Management/Extractor`, named using Pascal case format. | Uses a YAML file to define extracted resources (APIs, named values, products, etc.). Setting `diagnosticNames: [ignore]` excludes all APIs. |
+| **Publisher**  | Deploys artifacts to APIM instances and applies YAML config changes. | Located in `API Management/Publisher`, named using Pascal case format. | Uses environment-specific YAML files. Avoids hardcoding by using Azure Key Vault and named values for secure config management. |
 
-| **Pipeline**   | **Description**                                                                                              | **Pipeline Structure**                                                                                         |
-|----------------|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **Extractor**  | The extractor generates APIOps artifacts from an existing APIM instance. These artifacts can then be used as the source of truth for your APIM environment; make changes to them and have a CI/CD process update your Azure environment. | The Extractor pipeline is created under the `API Management/Extractor` location. The pipeline name is based on a business unit in a Pascal case format. |
-| **Publisher**  | The Publisher tool updates the Azure APIM instance with the artifact folder contents. It also picks up changes in the configuration YAML file when running the publisher. | The Publisher pipeline is created under the `API Management/Publisher` location. The pipeline name is based on a business unit in a Pascal case format. |
+## Limitations  
+| **Constraint**        | **Description**  |
+|----------------------|----------------------------------------------------------|
+| **API Schema Extraction** | Extractor does not support extracting API schemas. The feature is under development. Use Terraform as a temporary solution. |
+
+## References  
+- [APIOps High-level Overview](#) – E7 - EIP DevSecOps - SDD  
+- [API Management Naming Standards](#) – Azure APIM Standards  
+- [APIOps How-To Page](#) – APIOps: How-To  
+
